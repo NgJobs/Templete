@@ -47,7 +47,12 @@ FetchContent_MakeAvailable(googletest)
 
 # --- 定义测试目标 ---
 # 添加一个测试可执行文件
-add_executable(Test Test/test.cpp)
+add_executable(Test)
+
+# 添加源文件
+target_sources(Test PRIVATE
+    "${PROJECT_SOURCE_DIR}/Test/test.cpp"
+)
 
 # 为测试目标链接主项目的代码和头文件
 target_include_directories(Test PRIVATE
