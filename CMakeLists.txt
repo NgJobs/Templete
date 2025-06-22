@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.22)
 
-# [新添加] 告诉 CMake 对 FetchContent 使用新的、更健壮的时间戳行为
+# 告诉 CMake 对 FetchContent 使用新的、更健壮的时间戳行为
 cmake_policy(SET CMP0135 NEW)
 get_filename_component(PROJECT_NAME_FROM_DIR ${CMAKE_CURRENT_SOURCE_DIR} NAME)
 project(${PROJECT_NAME_FROM_DIR} VERSION 1.0 LANGUAGES CXX)
@@ -53,6 +53,13 @@ add_executable(Test Test/test.cpp)
 target_include_directories(Test PRIVATE
     "${PROJECT_SOURCE_DIR}/Inc"
 )
+
+# 告诉 CMake 在哪里寻找库文件
+target_link_directories(Test PRIVATE "${PROJECT_SOURCE_DIR}/Lib")
+
+# 链接一个具体的库文件 (例如 'libexample.a')
+# 如果你的测试代码调用了 example 库的功能，就需要取消这行的注释
+# target_link_libraries(Test PRIVATE example)
 
 # 将测试可执行文件链接到 Google Test
 # GTest::gtest_main 包含了 Google Test 的库和它自己的 main 函数
