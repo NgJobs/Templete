@@ -1,0 +1,46 @@
+# Compiled object files
+*.o
+*.obj
+*.slo
+*.lo
+
+# Precompiled headers
+*.gch
+*.pch
+
+# Compiled static libraries
+*.a
+*.lib
+
+# Compiled shared libraries and executables
+*.so
+*.dll
+*.dylib
+*.exe
+*.out
+*.app
+
+# Build directories
+build/
+bin/
+obj/
+Debug/
+Release/
+
+# IDE-specific files
+.vscode/
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+# CMake files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+CTestTestfile.cmake
+compile_commands.json
+
+# macOS specific
+.DS_Store
