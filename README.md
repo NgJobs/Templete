@@ -1,0 +1,1 @@
+# This is a templete project of C++.
