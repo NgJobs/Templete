@@ -29,7 +29,10 @@ Release/
 
 # IDE-specific files
 .vscode/
+.idea/
 .vs/
+.cache
+*.code-workspace
 *.suo
 *.user
 *.sln.docstates

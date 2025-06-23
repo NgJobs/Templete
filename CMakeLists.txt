@@ -18,6 +18,7 @@ add_executable(${PROJECT_NAME})
 # 添加源文件
 target_sources(${PROJECT_NAME} PRIVATE
     "${PROJECT_SOURCE_DIR}/Src/main.cpp"
+    "${PROJECT_SOURCE_DIR}/Src/sum.cpp"
 )
 
 # 添加头文件
@@ -52,6 +53,7 @@ add_executable(Test)
 # 添加源文件
 target_sources(Test PRIVATE
     "${PROJECT_SOURCE_DIR}/Test/test.cpp"
+    "${PROJECT_SOURCE_DIR}/Src/sum.cpp"
 )
 
 # 为测试目标链接主项目的代码和头文件
